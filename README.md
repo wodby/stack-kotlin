@@ -11,6 +11,7 @@ composition for Kotlin.
 
 - [Kotlin stack on Wodby](https://wodby.com/stacks/kotlin)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
+- [Kotlin stack guide](https://wodby.com/docs/2.0/stacks/catalog/kotlin/)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
 - [Stack manifest reference](https://wodby.com/docs/2.0/stacks/template/)
 
@@ -30,18 +31,20 @@ start with Wodby CI build configuration:
 - [OpenSMTPD service](https://github.com/wodby/service-opensmtpd)
 - [Gotenberg service](https://github.com/wodby/service-gotenberg)
 - [Cloud PostgreSQL service](https://github.com/wodby/service-cloud-postgres)
+- [OpenTelemetry Collector service](https://github.com/wodby/service-opentelemetry-collector)
 
 ## What's included
 
 | Component / service | Default configuration |
 | --- | --- |
-| Kotlin<br>`kotlin` | required; enabled by default; links: `db` → `postgres`, `redis` → `valkey`, `sendmail` → `mailpit` |
+| Kotlin<br>`kotlin` | required; enabled by default; links: `db` → `postgres`, `redis` → `valkey`, `sendmail` → `mailpit`, `otel` → `otel-collector` |
 | PostgreSQL<br>`postgres` | optional; disabled by default; volumes: `data` 20 GB |
 | Valkey<br>`valkey` | optional; disabled by default |
 | Mailpit<br>`mailpit` | optional; disabled by default |
 | OpenSMTPD<br>`opensmtpd` | optional; disabled by default |
 | Gotenberg<br>`gotenberg` | optional; disabled by default |
 | Cloud PostgreSQL<br>`cloud-postgres` | optional; disabled by default |
+| OpenTelemetry Collector<br>`otel-collector` | optional; disabled by default |
 
 Enabled optional services are selected by default but can be excluded when an
 app is created. Disabled optional services are available but not selected by
